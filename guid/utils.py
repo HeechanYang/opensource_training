@@ -24,14 +24,14 @@ def shour_url(url):
 
 		# add ascii value of 10 character
 		for j in range(start_idx, start_idx+10):
-			if(start_idx >= len(url))
+			if (start_idx >= len(url))
 				break
 			new_char += ord(url[j])
 
 		new_char = new_char % 128
 
 		# if modulo result is in A-z, add it to shorted uri
-		if(new_char >= 65 and new_char <= 122):
+		if (new_char >= 65 and new_char <= 122):
 			shorted_uri += chr(new_char)
 	
 	# find whether there is same shorted_uri in DB or not
@@ -40,3 +40,4 @@ def shour_url(url):
 	shorted_uri = shared_uri + shorted_uri
 	# save mapping in DB
 	return shorted_uri
+
